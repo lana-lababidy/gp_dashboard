@@ -1,21 +1,20 @@
-       
-
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; 
 import LoginForm from "./Pages/LoginForm"; 
 import Dashboard from "./Pages/Dashboard"; 
-import Users from "./Components/Users";
-import Requests from "./Components/Requests";
-import FAQ from "./Components/FAQ"; 
-import Reports from "./Components/Reports";
-import Notifications from "./Components/Notifications"; 
-import Settings from "./Components/Settings";
+import Users from "./Pages/Users";
+import Requests from "./Pages/Requests";
+import FAQ from "./Pages/FAQ"; 
+import Reports from "./Pages/Reports";
+import Notifications from "./Pages/Notifications"; 
+// import Settings from "./Components/Settings";
 import Sidebar from './Components/Sidebar';
+import Wallet from "./Pages/Wallet";
 import Navbar from './Components/Navbar';
 
 import { Box, CssBaseline } from "@mui/material";
 import { ThemeProvider, createTheme } from '@mui/material';
-import Ranks from "./Components/Ranks";
+import Ranks from "./Pages/Ranks";
 
 function App() { 
   // 🔹 هنا عرّفنا الـ theme
@@ -53,8 +52,9 @@ function App() {
             <Route path="/faq" element={<AdminLayout><FAQ /></AdminLayout>} />
             <Route path="/reports" element={<AdminLayout><Reports /></AdminLayout>} />
             <Route path="/notifications" element={<AdminLayout><Notifications /></AdminLayout>} />
-            <Route path="/settings" element={<AdminLayout><Settings /></AdminLayout>} />
+            {/* <Route path="/settings" element={<AdminLayout><Settings /></AdminLayout>} /> */}
             <Route path="/ranks" element={<AdminLayout><Ranks /></AdminLayout>} />
+            <Route path="/wallet" element={<AdminLayout><Wallet/></AdminLayout>} />
             <Route path="*" element={<Navigate to="/login" replace />} />   
           </Routes>
         </Router> 
