@@ -62,12 +62,12 @@ function LoginForm() {
               </a>
             </div>
 
-            {/* <button
+            <button
               type="submit"
               className="w-full bg-gradient-to-r from-pink-500 to-purple-600 text-white py-2 rounded-md shadow-md hover:opacity-90 transition"
             >
               LOGIN
-            </button> */} 
+            </button> 
           </form>
         </div>
       </div>
