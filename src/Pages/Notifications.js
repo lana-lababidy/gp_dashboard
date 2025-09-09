@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import {PieChart,Pie,Cell,LineChart,Line,XAxis,YAxis,Tooltip,Legend,ResponsiveContainer,} from "recharts";
-import {Bell,Send,Trash2,Users,School,FileText,X,Filter,Download,RefreshCw,} from "lucide-react";
+import {Bell,Send,Trash2,Users,School,FileText,X,Filter,RefreshCw,} from "lucide-react";
 
 
 const MOCK_NOTIFICATIONS = [
@@ -78,22 +78,7 @@ function toLocalDate(ts) {
   return d.toLocaleString();
 }
 
-function downloadCSV(filename, rows) {
-  if (!rows || rows.length === 0) return;
-  const header = Object.keys(rows[0]);
-  const esc = (v) => `"${String(v ?? "").replaceAll('"', '""')}"`;
-  const csv =
-    [header.map(esc).join(",")]
-      .concat(rows.map((r) => header.map((h) => esc(r[h])).join(",")))
-      .join("\n");
-  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
-}
+
 
 
 function Badge({ children, color = "gray" }) {
@@ -292,7 +277,7 @@ function NewNotificationModal({ open, onClose, onSubmit, schools = [], donors = 
 
   // charts data
   const pieData = useMemo(() => {
-    const all = rows.length || 1;
+    // const all = rows.length || 1;
     const school = rows.filter(r => r.targetType === "School").length;
     const donor = rows.filter(r => r.targetType === "Donor").length;
     const other = rows.filter(r => r.targetType !== "School" && r.targetType !== "Donor").length;

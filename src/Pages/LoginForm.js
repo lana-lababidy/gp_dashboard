@@ -57,9 +57,7 @@ function LoginForm() {
                 <input type="checkbox" className="w-4 h-4" />
                 <span>Remember me</span>
               </label>
-              <a href="#" className="text-blue-500 hover:underline">
-                ?Forgot password
-              </a>
+              
             </div>
 
             <button

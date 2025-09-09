@@ -6,12 +6,6 @@ import {
   LineChart, Line
 } from "recharts";
 
-const dataBar = [
-  { name: "Week 1", value: 20 },
-  { name: "Week 2", value: 25 },
-  { name: "Week 3", value: 22 },
-  { name: "Week 4", value: 28 },
-];
 
 
 const dataPie = [

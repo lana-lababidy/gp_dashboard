@@ -91,11 +91,7 @@ function Requests() {
     setRequests(updated);
   };
 
-  const openModal = (req) => {
-    setSelectedRequest(req);
-    setUploadedImages([]);
-    setUploadedVideo(null);
-  };
+
 
   const handleImageUpload = (e) => {
     const files = Array.from(e.target.files);
@@ -158,10 +154,7 @@ function Requests() {
     req.title.toLowerCase().includes(search.toLowerCase())
   );
 
-  const totalRequests = requests.length;
-  const pendingRequests = requests.filter((r) => r.status === "PENDING").length;
-  const acceptedRequests = requests.filter((r) => r.status === "DONE").length;
-  const rejectedRequests = requests.filter((r) => r.status === "DECLINED").length;
+  
 
   return (
     <div className="p-6 space-y-6">
@@ -406,18 +399,8 @@ function Requests() {
         </div>
       )}
     </div>
-  );
-}
-
-// Statistic card component
-function StatCard({ label, value }) {
-  return (
-    <div className="bg-white p-4 rounded shadow text-center border">
-      <p className="text-gray-500 text-sm">{label}</p>
-      <h3 className="text-xl font-bold">{value}</h3>
-    </div>
-  );
-}
+  )
+};
 
 export default Requests;
 
