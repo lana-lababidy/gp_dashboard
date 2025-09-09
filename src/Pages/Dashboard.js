@@ -74,17 +74,15 @@ const dataLine = [
           </PieChart>
         </ChartCard>
 
-        <ChartCard title="Average Completion Time">
-          <ChartCard title="Average Completion Time">
-  <BarChart width={250} height={150} data={dataLine}>
+  <ChartCard title="Average Completion Time">
+       
+    <BarChart width={250} height={150} data={dataLine}>
     <CartesianGrid strokeDasharray="3 3" />
     <XAxis dataKey="month" />
     <YAxis />
     <Tooltip />
     <Bar dataKey="value" fill="#8884d8" />
   </BarChart>
-</ChartCard>
-
         </ChartCard>
       </div>
     </div>
