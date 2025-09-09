@@ -212,7 +212,7 @@ function Requests() {
               <th className="p-3 border">Type</th>
               <th className="p-3 border">Date</th>
               <th className="p-3 border">Status</th>
-              <th className="p-3 border">Action</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -234,14 +234,6 @@ function Requests() {
                       </option>
                     ))}
                   </select>
-                </td>
-                <td className="p-3 border">
-                  <button
-                    onClick={() => openModal(req)}
-                    className="text-blue-600 hover:underline"
-                  >
-                    View Details
-                  </button>
                 </td>
               </tr>
             ))}

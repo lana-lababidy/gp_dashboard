@@ -1,13 +1,13 @@
 
 import React from "react";
-import { useNavigate } from "react-router-dom"; // ✅ مهم
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // هنا ممكن كمان تحذفي بيانات المستخدم أو التوكن إذا في
-    navigate("/"); // ✅ يرجعك لواجهة تسجيل الدخول
+    
+    navigate("/");
   };
 
   return (
@@ -16,7 +16,7 @@ function Navbar() {
       <div className="flex items-center gap-4">
         
         <button
-          onClick={handleLogout} // ✅ تفعيل الزر
+          onClick={handleLogout} 
           className="bg-red-500 text-white px-3 py-1 rounded"
         >
           Logout

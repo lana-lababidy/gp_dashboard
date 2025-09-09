@@ -1,18 +1,6 @@
  
 import React from "react";
-import {
-  PieChart,
-  Pie,
-  Cell,
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-  LineChart,
-  Line,
-} from "recharts";
+import {PieChart,Pie,Cell,BarChart,Bar,XAxis,YAxis,Tooltip,ResponsiveContainer, LineChart,Line,} from "recharts";
 import { DollarSign, School, Users, CheckCircle } from "lucide-react";
 
 // Mock Data

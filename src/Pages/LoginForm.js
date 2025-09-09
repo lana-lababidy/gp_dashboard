@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function LoginForm() {
   const navigate = useNavigate();
 
-  //  نخزن المدخلات
+  
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -12,10 +12,10 @@ function LoginForm() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    //  تحقق من البيانات
+    
     if (username === "haneen" && password === "12341234") {
       setError("");
-      navigate("/dashboard"); // يدخل للداشبورد
+      navigate("/dashboard"); 
     } else {
       setError( "Error" );
     }
@@ -49,7 +49,7 @@ function LoginForm() {
               className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
             />
 
-            {/*  رسالة خطأ */}
+           
             {error && <p className="text-red-500 text-sm">{error}</p>}
 
             <div className="flex items-center justify-between text-sm">

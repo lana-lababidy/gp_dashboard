@@ -43,15 +43,7 @@ const dataLine = [
       </div>
 
       <div className="grid grid-cols-3 gap-6">
-        {/* <ChartCard title="Average Velysamy">
-          <BarChart width={250} height={150} data={dataBar}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Bar dataKey="value" fill="#82ca9d" />
-          </BarChart>
-        </ChartCard> */} 
+      
         <ChartCard title="Average Velysamy">
   <LineChart width={250} height={150} data={dataLine} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
     <CartesianGrid strokeDasharray="3 3" />
@@ -61,7 +53,7 @@ const dataLine = [
     <Line
       type="monotone"
       dataKey="value"
-      stroke="#21a179"  // لون أخضر قريب من اللون في الصورة
+      stroke="#21a179" 
       strokeWidth={3}
       dot={{ stroke: "#21a179", strokeWidth: 3, r: 4 }}
       activeDot={{ r: 6 }}

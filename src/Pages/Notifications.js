@@ -1,38 +1,8 @@
 import React, { useMemo, useState } from "react";
-import {
-  PieChart,
-  Pie,
-  Cell,
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from "recharts";
-import {
-  Bell,
-  Send,
-  Trash2,
-  Users,
-  School,
-  FileText,
-  X,
-  Filter,
-  Download,
-  RefreshCw,
-} from "lucide-react";
+import {PieChart,Pie,Cell,LineChart,Line,XAxis,YAxis,Tooltip,Legend,ResponsiveContainer,} from "recharts";
+import {Bell,Send,Trash2,Users,School,FileText,X,Filter,Download,RefreshCw,} from "lucide-react";
 
-/**
- * Notifications Page (Admin)
- * - TailwindCSS styles only
- * - Recharts for charts
- * - lucide-react icons
- * Replace mock data and handlers with real API calls when integrating.
- */
 
-/* -------------------- Mock Data -------------------- */
 const MOCK_NOTIFICATIONS = [
   {
     id: 101,
@@ -98,7 +68,7 @@ const MOCK_MONTHLY_SENT = [
 
 const COLORS = ["#3b82f6", "#22c55e", "#f59e0b", "#ef4444"];
 
-/* -------------------- Utilities -------------------- */
+
 function classNames(...arr) {
   return arr.filter(Boolean).join(" ");
 }
@@ -125,7 +95,7 @@ function downloadCSV(filename, rows) {
   URL.revokeObjectURL(url);
 }
 
-/* -------------------- Small UI Pieces -------------------- */
+
 function Badge({ children, color = "gray" }) {
   const map = {
     gray: "bg-gray-100 text-gray-700",
@@ -172,7 +142,7 @@ function SectionCard({ title, action, children }) {
   );
 }
 
-/* -------------------- Modal -------------------- */
+
 function NewNotificationModal({ open, onClose, onSubmit, schools = [], donors = [] }) {
   const [title, setTitle] = useState("");
   const [message, setMessage] = useState("");
@@ -298,7 +268,7 @@ function NewNotificationModal({ open, onClose, onSubmit, schools = [], donors = 
   );
 }
 
-/* -------------------- Main Page -------------------- */
+
  function Notifications() {
   const [rows, setRows] = useState(MOCK_NOTIFICATIONS);
   const [query, setQuery] = useState("");
@@ -380,14 +350,7 @@ function NewNotificationModal({ open, onClose, onSubmit, schools = [], donors = 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <h1 className="text-2xl font-bold text-gray-800">Notifications</h1>
           <div className="flex items-center gap-2">
-            <button
-              onClick={() => downloadCSV("notifications.csv", filtered)}
-              className="px-3 py-2 rounded-lg bg-white border border-gray-200 text-sm hover:bg-gray-100 flex items-center gap-2"
-              title="Export CSV"
-            >
-              <Download size={16} />
-              Export
-            </button>
+           
             <button
               onClick={() => setOpenModal(true)}
               className="px-3 py-2 rounded-lg bg-gray-900 text-white text-sm hover:bg-black flex items-center gap-2"
@@ -497,15 +460,6 @@ function NewNotificationModal({ open, onClose, onSubmit, schools = [], donors = 
         {/* Table */}
         <SectionCard
           title="Notifications List"
-          action={
-            <button
-              onClick={() => downloadCSV("notifications.csv", filtered)}
-              className="px-3 py-2 rounded-lg bg-white border border-gray-200 text-sm hover:bg-gray-100 flex items-center gap-2"
-            >
-              <Download size={16} />
-              Export
-            </button>
-          }
         >
           <div className="overflow-x-auto">
             <table className="min-w-full text-sm border border-gray-200 rounded-lg">
