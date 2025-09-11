@@ -1,11 +1,9 @@
-import { 
-  HomeIcon, 
-  UserIcon, 
-  ClipboardDocumentListIcon, 
+import {
+  UserIcon,
+  ClipboardDocumentListIcon,
   QuestionMarkCircleIcon,
   BellIcon,
-  Squares2X2Icon,
-   WalletIcon
+  WalletIcon,
 } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import logo from "../Assets/abshir.jpg"; 
@@ -24,30 +22,20 @@ function Sidebar() {
       </div>
 
       <nav className="flex flex-col gap-2 mt-6 w-full px-4">
-        <Link to="/" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
-          <HomeIcon className="w-5 h-5" /> Dashboard
+        <Link to="/dashboard" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
+          <BellIcon className="w-5 h-5" />الاحصائيات
         </Link>
-        <Link to="/users" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
-          <UserIcon className="w-5 h-5" /> Users
+        <Link to="/secret-info" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
+          <UserIcon className="w-5 h-5" /> المستخدمين
         </Link>
         <Link to="/requests" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
-          <ClipboardDocumentListIcon className="w-5 h-5" /> Requests
+          <ClipboardDocumentListIcon className="w-5 h-5" /> الطلبات
         </Link>
         <Link to="/faq" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
-          <QuestionMarkCircleIcon className="w-5 h-5" /> FAQ
+          <QuestionMarkCircleIcon className="w-5 h-5" /> الأسئلة و الأجوبة
         </Link>
-        <Link to="/notifications" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
-          <BellIcon className="w-5 h-5" /> Notifications
-        </Link>
-        <Link to="/reports" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
-          <BellIcon className="w-5 h-5" /> Reports
-        </Link>
-        <Link to="/ranks" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
-          <Squares2X2Icon className="w-5 h-5" /> Ranks 
-        </Link>
-
         <Link to="/wallet" className="flex items-center gap-3 p-2 hover:bg-gray-700 rounded">
-          <WalletIcon className="w-5 h-5" /> Wallet
+          <WalletIcon className="w-5 h-5" /> المحفظة
         </Link>
       </nav>
     </div>
