@@ -88,12 +88,12 @@ function Wallet() {
             <thead>
               <tr className="bg-gray-200 text-gray-700">
                 <th className="p-3">المعرف</th>
-<th className="p-3">المستخدم</th>
-<th className="p-3">الاسم المستعار</th>
-<th className="p-3">رقم الجوال</th>
-<th className="p-3">المبلغ</th>
-<th className="p-3">التاريخ</th>
-<th className="p-3">الإجراء</th>
+                 <th className="p-3">المستخدم</th>
+                <th className="p-3">الاسم المستعار</th>
+                <th className="p-3">رقم الجوال</th>
+                <th className="p-3">المبلغ</th>
+                <th className="p-3">التاريخ</th>
+                <th className="p-3">الإجراء</th>
               </tr>
             </thead>
             <tbody>
